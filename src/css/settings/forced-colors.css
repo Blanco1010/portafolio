@@ -1,0 +1,26 @@
+/* ========================= 20. ALTO CONTRASTE =========================== */
+/* En modo de contraste forzado el degradado recortado sobre texto se pierde,
+   así que se devuelve el color del sistema. */
+@media (forced-colors: active) {
+  .hero__title-line--accent {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    color: CanvasText;
+    forced-color-adjust: none;
+  }
+
+  .site-header.is-stuck {
+    background: Canvas;
+  }
+
+  .skill,
+  .filter,
+  .stat,
+  .panel,
+  .timeline__card,
+  .contact__card {
+    border-color: CanvasText;
+  }
+}
+

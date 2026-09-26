@@ -1,0 +1,8 @@
+/* ============================= 14. EDUCACIÓN ============================= */
+.education {
+  display: grid;
+  /* 240px y no 280px: a 320px de ancho el contenido disponible es de 280px justos. */
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 1.5rem;
+}
+

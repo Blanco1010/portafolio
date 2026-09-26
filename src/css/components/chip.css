@@ -1,0 +1,24 @@
+/* ============================== 12. CHIPS ================================ */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.3rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  transition:
+    color var(--t-base) var(--ease-soft),
+    border-color var(--t-base) var(--ease-soft);
+}
+.timeline__card:hover .chip {
+  color: var(--text-muted);
+  border-color: var(--border-strong);
+}
+

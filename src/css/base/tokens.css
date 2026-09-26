@@ -1,0 +1,68 @@
+/* =============================================================================
+   Portafolio — Juan Camilo Blanco Martinez
+   Hoja de estilos principal
+   ---------------------------------------------------------------------------
+   Orden: tokens · reset · utilidades · animaciones · layout · componentes
+   ========================================================================== */
+
+/* ============================== 1. TOKENS ================================= */
+:root {
+  /* Superficies */
+  --bg: #0a0e14;
+  --surface: #0f151e;
+  --surface-2: #141c27;
+  --surface-3: #1a2431;
+  --border: #1e2836;
+  --border-strong: #2c3a4d;
+
+  /* Texto. Verificados >= 4.5:1 sobre --bg Y sobre --surface-2, que es la
+     superficie más clara donde se apoyan (chips, chrome de la tarjeta de código). */
+  --text: #e8eef7;
+  --text-muted: #9aa8bd;
+  --text-dim: #8595ad;
+
+  /* Acentos */
+  --accent: #5eead4;
+  --accent-deep: #2dd4bf;
+  --accent-2: #818cf8;
+  --accent-soft: rgba(94, 234, 212, 0.12);
+  --accent-line: rgba(94, 234, 212, 0.28);
+
+  /* Tipografía */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, 'Consolas', monospace;
+
+  --step--1: clamp(0.78rem, 0.75rem + 0.15vw, 0.86rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.18vw, 1.05rem);
+  --step-1: clamp(1.1rem, 1.02rem + 0.4vw, 1.3rem);
+  --step-2: clamp(1.35rem, 1.18rem + 0.85vw, 1.85rem);
+  --step-3: clamp(1.8rem, 1.4rem + 2vw, 3rem);
+  --step-4: clamp(2.3rem, 1.5rem + 3.4vw, 3.85rem);
+
+  /* Espacio y formas */
+  --shell: 1140px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-y: clamp(4.5rem, 10vw, 8.5rem);
+  --header-h: 72px;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-full: 999px;
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 14px 40px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 18px 60px rgba(94, 234, 212, 0.1);
+
+  /* Movimiento */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 0.18s;
+  --t-base: 0.32s;
+  --t-slow: 0.6s;
+
+  /* Posición del puntero (la escribe main.ts) */
+  --mx: 70%;
+  --my: 28%;
+}
+

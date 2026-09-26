@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Juan Camilo Blanco Martinez | Ingeniero de Sistemas</title>
+    <meta
+      name="description"
+      content="Ingeniero de Sistemas con 4 años de experiencia en Flutter, Angular, Node y servicios en la nube. Pereira, Colombia."
+    />
+    <meta name="author" content="Juan Camilo Blanco Martinez" />
+    <meta name="theme-color" content="#0a0e14" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- PNG y no SVG a propósito: el renderizador de favicons de Chrome no
+         compone texto, así que un SVG con <text> sale sin letras. Rasterizado
+         funciona en todos los navegadores. -->
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="assets/favicon-16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:title" content="Juan Camilo Blanco Martinez — Desarrollador de Software" />
+    <meta
+      property="og:description"
+      content="Ingeniero de Sistemas y Computación con 4 años construyendo aplicaciones multiplataforma, soluciones web y backends escalables."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- ⚠️ ANTES DE PUBLICAR: sustituye TU-DOMINIO.com por tu dominio real y
+         descomenta las tres líneas. La imagen ya existe (assets/og-image.png,
+         1200x630); solo le falta la URL absoluta, que es lo que exigen
+         WhatsApp, LinkedIn y X para mostrar la tarjeta. -->
+    <!--
+    <meta property="og:image" content="https://TU-DOMINIO.com/assets/og-image.png" />
+    <meta property="og:url" content="https://TU-DOMINIO.com/" />
+    <link rel="canonical" href="https://TU-DOMINIO.com/" />
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Las fuentes se cargan SIN bloquear el render: una hoja de estilos externa
+         retrasa el primer pintado tanto como tarde en responder. Con media="print"
+         el navegador la descarga en segundo plano y solo la aplica al terminar, así
+         que con Google Fonts lento o caído la página se ve igual, con las fuentes
+         del sistema declaradas en --font-sans / --font-mono. -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap"
+      />
+    </noscript>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Juan Camilo Blanco Martinez",
+        "jobTitle": "Ingeniero de Sistemas y Computación",
+        "email": "blancotech1010@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pereira",
+          "addressRegion": "Risaralda",
+          "addressCountry": "CO"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad Tecnológica de Pereira"
+        },
+        "knowsLanguage": ["Español", "Inglés"],
+        "knowsAbout": [
+          "Flutter",
+          "Angular",
+          "React",
+          "Node.js",
+          "Spring Boot",
+          "Laravel",
+          "Firebase",
+          "Google Cloud",
+          "AWS",
+          "Docker"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar" data-progress></span></div>
+
+    <div class="ambient" aria-hidden="true">
+      <div class="ambient__glow" data-glow></div>
+      <div class="ambient__grid"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="shell site-header__inner">
+        <a class="brand" href="#inicio" aria-label="Juan Camilo Blanco — ir al inicio">
+          <span class="brand__mark" aria-hidden="true">
+            <span class="brand__bracket">&lt;</span>JCB<span class="brand__bracket">/&gt;</span>
+          </span>
+        </a>
+
+        <!-- El botón va ANTES del panel en el DOM: así, al abrirlo en móvil, el
+             siguiente Tab entra en el menú y no se escapa al contenido de abajo. -->
+        <button
+          class="burger"
+          type="button"
+          aria-controls="navegacion-principal"
+          aria-expanded="false"
+          data-burger
+        >
+          <span class="burger__box" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="burger__label" data-burger-label>Abrir menú</span>
+        </button>
+
+        <nav class="nav" id="navegacion-principal" aria-label="Navegación principal" data-nav>
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="#sobre-mi" data-nav-link>Sobre mí</a></li>
+            <li><a class="nav__link" href="#experiencia" data-nav-link>Experiencia</a></li>
+            <li><a class="nav__link" href="#habilidades" data-nav-link>Habilidades</a></li>
+            <li><a class="nav__link" href="#educacion" data-nav-link>Educación</a></li>
+            <li><a class="nav__link" href="#contacto" data-nav-link>Contacto</a></li>
+          </ul>
+          <a class="btn btn--ghost nav__cta" href="assets/cv-juan-camilo-blanco-martinez.pdf" download="CV - Juan Camilo Blanco Martinez.pdf">
+            Descargar CV
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+      <!-- ============================ HERO ============================ -->
+      <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+        <div class="shell hero__inner">
+          <div class="hero__content">
+            <p class="hero__eyebrow" data-reveal>
+              <span class="hero__status" aria-hidden="true"></span>
+              4 años de experiencia · Pereira, Colombia
+            </p>
+
+            <h1 class="hero__title" id="hero-titulo" data-reveal data-reveal-delay="1">
+              <span class="hero__title-line">Juan Camilo</span>
+              <span class="hero__title-line hero__title-line--accent">Blanco Martinez</span>
+            </h1>
+
+            <p class="hero__role" data-reveal data-reveal-delay="2">
+              <span class="hero__role-static">Ingeniero de Sistemas</span>
+              <span class="hero__role-sep" aria-hidden="true">·</span>
+              <!-- El rotador y su botón van envueltos juntos para que, al estrecharse
+                   la columna, salten de línea como una unidad y no por separado. -->
+              <span class="hero__role-group">
+                <span class="hero__role-rotator" data-rotator aria-live="off">
+                  <span class="hero__role-word" data-rotator-word>Desarrollador Full-Stack</span><span
+                    class="hero__role-caret"
+                    aria-hidden="true"
+                  ></span>
+                </span>
+                <!-- WCAG 2.2.2: todo texto que se auto-actualiza necesita un modo de detenerlo. -->
+                <button
+                  class="role-toggle"
+                  type="button"
+                  data-rotator-toggle
+                  aria-label="Pausar la rotación de roles"
+                >
+                  <svg class="role-toggle__icon" viewBox="0 0 16 16" aria-hidden="true">
+                    <rect class="role-toggle__pause" x="4" y="3" width="3" height="10" rx="1" />
+                    <rect class="role-toggle__pause" x="9" y="3" width="3" height="10" rx="1" />
+                    <path class="role-toggle__play" d="M5 3.5v9l8-4.5-8-4.5Z" />
+                  </svg>
+                </button>
+              </span>
+            </p>
+
+            <p class="hero__lead" data-reveal data-reveal-delay="3">
+              4 años construyendo aplicaciones multiplataforma para Android e iOS, soluciones web y
+              backends escalables. Trabajo con arquitecturas limpias, servicios en la nube y sistemas
+              en tiempo real, con foco en código eficiente, seguro y mantenible.
+            </p>
+
+            <div class="hero__actions" data-reveal data-reveal-delay="4">
+              <a class="btn btn--primary" href="#contacto">
+                Hablemos
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="btn btn--outline" href="#experiencia">Ver mi trayectoria</a>
+            </div>
+
+            <dl class="hero__facts" data-reveal data-reveal-delay="5">
+              <div class="hero__fact">
+                <dt>Ubicación</dt>
+                <dd>Pereira, Risaralda</dd>
+              </div>
+              <div class="hero__fact">
+                <dt>Idiomas</dt>
+                <dd>Español · Inglés</dd>
+              </div>
+              <div class="hero__fact">
+                <dt>Enfoque</dt>
+                <dd>Móvil · Web · Backend · Cloud</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero__visual" data-reveal data-reveal-delay="3">
+            <div class="code-card" data-tilt>
+              <div class="code-card__chrome">
+                <span class="code-card__dot code-card__dot--red"></span>
+                <span class="code-card__dot code-card__dot--amber"></span>
+                <span class="code-card__dot code-card__dot--green"></span>
+                <span class="code-card__file">developer.ts</span>
+              </div>
+              <pre class="code-card__body"><code><span class="tk-key">const</span> <span class="tk-var">developer</span><span class="tk-op">:</span> <span class="tk-type">Engineer</span> <span class="tk-op">=</span> {
+  <span class="tk-prop">nombre</span><span class="tk-op">:</span> <span class="tk-str">'Juan Camilo Blanco'</span>,
+  <span class="tk-prop">rol</span><span class="tk-op">:</span> <span class="tk-str">'Full-Stack Developer'</span>,
+  <span class="tk-prop">base</span><span class="tk-op">:</span> <span class="tk-str">'Pereira, Colombia'</span>,
+  <span class="tk-prop">stack</span><span class="tk-op">:</span> [
+    <span class="tk-str">'Flutter'</span>, <span class="tk-str">'Angular'</span>, <span class="tk-str">'React'</span>,
+    <span class="tk-str">'Node'</span>, <span class="tk-str">'Spring Boot'</span>,
+  ],
+  <span class="tk-prop">experiencia</span><span class="tk-op">:</span> <span class="tk-num">4</span>,
+  <span class="tk-prop">disponible</span><span class="tk-op">:</span> <span class="tk-bool">true</span>,
+};</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#sobre-mi">
+          <span class="scroll-cue__text">Scroll</span>
+          <span class="scroll-cue__line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <!-- ========================== SOBRE MÍ ========================== -->
+      <section class="section" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+        <div class="shell">
+          <header class="section__head" data-reveal>
+            <p class="section__index" aria-hidden="true">01</p>
+            <h2 class="section__title" id="sobre-mi-titulo">Sobre mí</h2>
+            <p class="section__lead">
+              Ingeniero de Sistemas y Computación de la Universidad Tecnológica de Pereira, orientado
+              al aprendizaje continuo y al trabajo en equipo.
+            </p>
+          </header>
+
+          <div class="about">
+            <div class="about__text" data-reveal>
+              <p>
+                Llevo <strong>4 años desarrollando aplicaciones multiplataforma</strong> para Android e
+                iOS con Flutter, además de soluciones web y la implementación de backends y sistemas
+                escalables.
+              </p>
+              <p>
+                Mi experiencia se concentra en <strong>arquitecturas limpias</strong>, servicios en la
+                nube, sistemas en tiempo real y optimización de rendimiento. He reducido costos de
+                backend en un 20% y mejorado el rendimiento de productos de e-commerce en un 30%.
+              </p>
+              <p>
+                Actualmente desarrollo un sistema de alertas tempranas para prevenir la deserción
+                universitaria, con autenticación institucional SSO y control de acceso por roles.
+              </p>
+            </div>
+
+            <ul class="stats" role="list" data-reveal data-reveal-delay="1">
+              <li class="stat">
+                <span class="stat__value"><span data-counter="4">0</span><span class="stat__plus">+</span></span>
+                <span class="stat__label">Años de experiencia</span>
+              </li>
+              <li class="stat">
+                <span class="stat__value"><span data-counter="13">0</span></span>
+                <span class="stat__label">Empresas y clientes</span>
+              </li>
+              <li class="stat">
+                <span class="stat__value"><span data-counter="29">0</span></span>
+                <span class="stat__label">Tecnologías</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= EXPERIENCIA ========================= -->
+      <section class="section section--alt" id="experiencia" aria-labelledby="experiencia-titulo">
+        <div class="shell">
+          <header class="section__head" data-reveal>
+            <p class="section__index" aria-hidden="true">02</p>
+            <h2 class="section__title" id="experiencia-titulo">Experiencia laboral</h2>
+            <p class="section__lead">
+              Tres compañías en plantilla y, desde TXEN, proyectos para varias empresas cliente.
+            </p>
+          </header>
+
+          <ol class="timeline" role="list">
+            <li class="timeline__item" data-reveal>
+              <div class="timeline__marker" aria-hidden="true">
+                <span class="timeline__dot timeline__dot--live"></span>
+              </div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div>
+                    <h3 class="timeline__company">Universidad Pedagógica y Tecnológica de Colombia</h3>
+                  </div>
+                  <p class="timeline__period">
+                    <span class="tag tag--live">Actual</span>
+                    <time datetime="2026-01">Enero 2026</time> — Presente
+                  </p>
+                </header>
+                <ul class="timeline__points" role="list">
+                  <li>
+                    Desarrollé un <strong>sistema de alertas tempranas (SAT)</strong> orientado a prevenir
+                    la deserción universitaria mediante encuestas personalizadas aplicadas a estudiantes.
+                  </li>
+                  <li>
+                    Diseñé e implementé un módulo de configuración de preguntas que permite a los
+                    administradores crear y personalizar encuestas.
+                  </li>
+                  <li>
+                    Construí la aplicación con diseño completamente responsive y optimizado para móvil,
+                    facilitando el diligenciamiento desde cualquier dispositivo.
+                  </li>
+                  <li>
+                    Implementé <strong>autenticación institucional SSO con Keycloak</strong> y control de
+                    acceso basado en roles para administradores y profesionales del sistema.
+                  </li>
+                </ul>
+                <ul class="chips chips--sm" role="list">
+                  <li class="chip">Angular</li>
+                  <li class="chip">Móvil</li>
+                  <li class="chip">Keycloak</li>
+                  <li class="chip">SSO</li>
+                  <li class="chip">Control por roles</li>
+                  <li class="chip">Responsive</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="timeline__item" data-reveal>
+              <div class="timeline__marker" aria-hidden="true"><span class="timeline__dot"></span></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div>
+                    <h3 class="timeline__company">TXEN S.A.S</h3>
+                  </div>
+                  <p class="timeline__period">
+                    <time datetime="2023-08">Agosto 2023</time> —
+                    <time datetime="2025-11">Noviembre 2025</time>
+                  </p>
+                </header>
+                <ul class="timeline__points" role="list">
+                  <li>
+                    Creé una <strong>aplicación de transporte</strong> con Firebase para comunicación en
+                    tiempo real, permitiendo visualizar la ubicación de los conductores.
+                  </li>
+                  <li>
+                    Desarrollé un sistema de gestión integral para e-commerce con procesos y herramientas
+                    para que las organizaciones operen de forma eficiente.
+                  </li>
+                  <li>
+                    <strong>Optimicé los costos del backend en un 20%</strong> reemplazando servicios
+                    anteriores por soluciones más eficientes.
+                  </li>
+                  <li>
+                    Implementé un servicio en la nube para almacenar información en el backend, mejorando
+                    la flexibilidad y escalabilidad del sistema.
+                  </li>
+                  <li>
+                    Implementé un <strong>microservicio de gestión de órdenes</strong> que optimizó los
+                    procesos de pedido y entrega.
+                  </li>
+                </ul>
+                <ul class="chips chips--sm" role="list">
+                  <li class="chip">Firebase</li>
+                  <li class="chip">Tiempo real</li>
+                  <li class="chip">Microservicios</li>
+                  <li class="chip">Cloud</li>
+                  <li class="chip">E-commerce</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="timeline__item" data-reveal>
+              <div class="timeline__marker" aria-hidden="true"><span class="timeline__dot"></span></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div>
+                    <h3 class="timeline__company">Adomi Aplicación Digital S.A.S</h3>
+                  </div>
+                  <p class="timeline__period">
+                    <time datetime="2022-08">Agosto 2022</time> —
+                    <time datetime="2023-08">Agosto 2023</time>
+                  </p>
+                </header>
+                <ul class="timeline__points" role="list">
+                  <li>
+                    Optimicé los proyectos principales de e-commerce de la empresa,
+                    <strong>mejorando su rendimiento en un 30%</strong>.
+                  </li>
+                  <li>
+                    Diseñé y desarrollé una aplicación de pedidos para Android e iOS con
+                    <strong>arquitectura limpia</strong> y código reutilizable, habilitando
+                    actualizaciones en tiempo real mediante Firebase Hosting y Cloud Functions.
+                  </li>
+                  <li>
+                    Desarrollé una aplicación de driver con la <strong>API de Google Maps</strong> para
+                    identificar puntos de recogida y entrega, calcular distancias, tiempos de viaje y
+                    tarifas para cada pedido.
+                  </li>
+                </ul>
+                <ul class="chips chips--sm" role="list">
+                  <li class="chip">Android</li>
+                  <li class="chip">iOS</li>
+                  <li class="chip">Arquitectura limpia</li>
+                  <li class="chip">Firebase Hosting</li>
+                  <li class="chip">Cloud Functions</li>
+                  <li class="chip">Google Maps</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ========================= HABILIDADES ========================= -->
+      <section class="section" id="habilidades" aria-labelledby="habilidades-titulo">
+        <div class="shell">
+          <header class="section__head" data-reveal>
+            <p class="section__index" aria-hidden="true">03</p>
+            <h2 class="section__title" id="habilidades-titulo">Stack tecnológico</h2>
+            <p class="section__lead">Tecnologías con las que he trabajado en proyectos profesionales.</p>
+          </header>
+
+          <div class="filters" role="group" aria-label="Filtrar habilidades por categoría" data-reveal>
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">
+              Todas
+            </button>
+            <button class="filter" type="button" data-filter="lenguajes" aria-pressed="false">Lenguajes</button>
+            <button class="filter" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+            <button class="filter" type="button" data-filter="movil" aria-pressed="false">Móvil</button>
+            <button class="filter" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+            <button class="filter" type="button" data-filter="cloud" aria-pressed="false">Cloud &amp; DevOps</button>
+            <button class="filter" type="button" data-filter="tools" aria-pressed="false">Herramientas</button>
+          </div>
+
+          <ul class="skills" role="list" data-skills data-reveal data-reveal-delay="1">
+            <li class="skill" data-category="lenguajes frontend">
+              <img class="skill__icon" src="assets/icons/javascript.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">JavaScript</span>
+            </li>
+            <li class="skill" data-category="lenguajes frontend">
+              <img class="skill__icon" src="assets/icons/typescript.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">TypeScript</span>
+            </li>
+            <li class="skill" data-category="lenguajes movil">
+              <img class="skill__icon" src="assets/icons/dart.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Dart</span>
+            </li>
+            <li class="skill" data-category="lenguajes backend">
+              <img class="skill__icon" src="assets/icons/java.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Java</span>
+            </li>
+            <li class="skill" data-category="lenguajes backend">
+              <img class="skill__icon" src="assets/icons/php.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">PHP</span>
+            </li>
+            <li class="skill" data-category="lenguajes backend">
+              <img class="skill__icon" src="assets/icons/go.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Go</span>
+            </li>
+            <li class="skill" data-category="lenguajes backend">
+              <img class="skill__icon" src="assets/icons/csharp.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">C#</span>
+            </li>
+            <li class="skill" data-category="frontend">
+              <img class="skill__icon" src="assets/icons/angular.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Angular</span>
+            </li>
+            <li class="skill" data-category="frontend">
+              <img class="skill__icon" src="assets/icons/react.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">React</span>
+            </li>
+            <li class="skill" data-category="frontend">
+              <img class="skill__icon" src="assets/icons/html.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">HTML</span>
+            </li>
+            <li class="skill" data-category="frontend">
+              <img class="skill__icon" src="assets/icons/css.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">CSS</span>
+            </li>
+            <li class="skill" data-category="movil">
+              <img class="skill__icon" src="assets/icons/flutter.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Flutter</span>
+            </li>
+            <li class="skill" data-category="movil">
+              <img class="skill__icon" src="assets/icons/android.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Android</span>
+            </li>
+            <li class="skill" data-category="backend">
+              <img class="skill__icon" src="assets/icons/node.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Node</span>
+            </li>
+            <li class="skill" data-category="backend">
+              <img class="skill__icon" src="assets/icons/nestjs.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">NestJS</span>
+            </li>
+            <li class="skill" data-category="backend">
+              <img class="skill__icon" src="assets/icons/spring.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Spring Boot</span>
+            </li>
+            <li class="skill" data-category="backend">
+              <img class="skill__icon" src="assets/icons/laravel.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Laravel</span>
+            </li>
+            <li class="skill" data-category="backend">
+              <img class="skill__icon" src="assets/icons/dotnet.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">.NET</span>
+            </li>
+            <li class="skill" data-category="backend">
+              <img class="skill__icon" src="assets/icons/serverpod.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Serverpod</span>
+            </li>
+            <li class="skill" data-category="cloud">
+              <img class="skill__icon" src="assets/icons/firebase.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Firebase</span>
+            </li>
+            <li class="skill" data-category="cloud">
+              <img class="skill__icon" src="assets/icons/gcp.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Google Cloud</span>
+            </li>
+            <li class="skill" data-category="cloud">
+              <img class="skill__icon" src="assets/icons/aws.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">AWS</span>
+            </li>
+            <li class="skill" data-category="cloud">
+              <img class="skill__icon" src="assets/icons/docker.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Docker</span>
+            </li>
+            <li class="skill" data-category="cloud">
+              <img class="skill__icon" src="assets/icons/kubernetes.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Kubernetes</span>
+            </li>
+            <li class="skill" data-category="cloud">
+              <img class="skill__icon" src="assets/icons/jenkins.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Jenkins</span>
+            </li>
+            <li class="skill" data-category="cloud">
+              <img class="skill__icon" src="assets/icons/devops.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">DevOps</span>
+            </li>
+            <li class="skill" data-category="tools">
+              <img class="skill__icon" src="assets/icons/git.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Git / GitHub</span>
+            </li>
+            <li class="skill" data-category="tools">
+              <img class="skill__icon" src="assets/icons/gitlab.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">GitLab</span>
+            </li>
+            <li class="skill" data-category="tools">
+              <img class="skill__icon" src="assets/icons/postman.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Postman</span>
+            </li>
+          </ul>
+
+          <p class="skills__status" data-skills-status role="status"></p>
+        </div>
+      </section>
+
+      <!-- ========================== EDUCACIÓN ========================== -->
+      <section class="section section--alt" id="educacion" aria-labelledby="educacion-titulo">
+        <div class="shell">
+          <header class="section__head" data-reveal>
+            <p class="section__index" aria-hidden="true">04</p>
+            <h2 class="section__title" id="educacion-titulo">Formación e idiomas</h2>
+            <p class="section__lead">Base académica y lenguas de trabajo.</p>
+          </header>
+
+          <div class="education">
+            <article class="panel" data-reveal>
+              <p class="panel__kicker">Educación</p>
+              <h3 class="panel__title">Ingeniería de Sistemas y Computación</h3>
+              <p class="panel__subtitle">Universidad Tecnológica de Pereira</p>
+              <p class="panel__meta">
+                <time datetime="2017-02">Febrero 2017</time> — <time datetime="2022-07">Julio 2022</time>
+              </p>
+            </article>
+
+            <article class="panel" data-reveal data-reveal-delay="1">
+              <p class="panel__kicker">Idiomas</p>
+              <ul class="languages" role="list">
+                <li class="language"><span class="language__name">Español</span></li>
+                <li class="language"><span class="language__name">Inglés</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================== CONTACTO =========================== -->
+      <section class="section" id="contacto" aria-labelledby="contacto-titulo">
+        <div class="shell">
+          <header class="section__head" data-reveal>
+            <p class="section__index" aria-hidden="true">05</p>
+            <h2 class="section__title" id="contacto-titulo">Hablemos</h2>
+            <p class="section__lead">
+              ¿Tienes un proyecto en mente o una vacante que encaje? Estos son mis datos de contacto.
+            </p>
+          </header>
+
+          <div class="contact">
+            <ul class="contact__list" role="list" data-reveal>
+              <li>
+                <a class="contact__card" href="mailto:blancotech1010@gmail.com">
+                  <span class="contact__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m3 7 9 6 9-6" />
+                    </svg>
+                  </span>
+                  <span class="contact__body">
+                    <span class="contact__label">Email</span>
+                    <span class="contact__value">blancotech1010@gmail.com</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <span class="contact__card contact__card--static">
+                  <span class="contact__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" />
+                      <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                  </span>
+                  <span class="contact__body">
+                    <span class="contact__label">Ubicación</span>
+                    <span class="contact__value">Pereira, Risaralda, Colombia</span>
+                  </span>
+                </span>
+              </li>
+            </ul>
+
+            <aside class="cta" data-reveal data-reveal-delay="1">
+              <h3 class="cta__title">¿Trabajamos juntos?</h3>
+              <p class="cta__text">
+                Escríbeme por correo o descarga mi hoja de vida completa en PDF, con el detalle de cada
+                proyecto y tecnología.
+              </p>
+              <div class="cta__actions">
+                <a class="btn btn--primary" href="mailto:blancotech1010@gmail.com">Enviar correo</a>
+                <a class="btn btn--outline" href="assets/cv-juan-camilo-blanco-martinez.pdf" download="CV - Juan Camilo Blanco Martinez.pdf">
+                  Descargar CV (PDF)
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__brand">
+          <span class="brand__bracket" aria-hidden="true">&lt;</span>JCB<span
+            class="brand__bracket"
+            aria-hidden="true"
+            >/&gt;</span
+          >
+        </p>
+        <p class="site-footer__text">
+          Diseñado y desarrollado por <strong>Juan Camilo Blanco Martinez</strong>
+        </p>
+        <p class="site-footer__meta">
+          &copy; <span data-year>2026</span> · Pereira, Colombia ·
+          <a href="mailto:blancotech1010@gmail.com">blancotech1010@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- type="module" ya implica defer: se descarga en paralelo y se ejecuta
+         tras analizar el HTML. No hace falta añadirlo. -->
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+/* Tarjeta de código */
+.hero__visual {
+  perspective: 1200px;
+}
+
+.code-card {
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform var(--t-slow) var(--ease-out);
+  will-change: transform;
+}
+
+.code-card__chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border);
+}
+.code-card__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.code-card__dot--red {
+  background: #ff5f57;
+}
+.code-card__dot--amber {
+  background: #febc2e;
+}
+.code-card__dot--green {
+  background: #28c840;
+}
+.code-card__file {
+  margin-left: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.code-card__body {
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 0.66rem + 0.3vw, 0.85rem);
+  line-height: 1.85;
+  color: var(--text-muted);
+  tab-size: 2;
+}
+.code-card__body code {
+  white-space: pre;
+}
+
+.tk-key {
+  color: #c792ea;
+}
+.tk-var {
+  color: #82aaff;
+}
+.tk-type {
+  color: var(--accent);
+}
+.tk-prop {
+  color: #7fdbca;
+}
+.tk-str {
+  color: #ecc48d;
+}
+.tk-num {
+  color: #f78c6c;
+}
+.tk-bool {
+  color: #c792ea;
+}
+.tk-op {
+  color: var(--text-dim);
+}
+
+/* Indicador de scroll */

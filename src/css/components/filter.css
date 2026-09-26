@@ -1,0 +1,33 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.25rem;
+}
+
+.filter {
+  padding: 0.55rem 1.15rem;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  transition:
+    color var(--t-base) var(--ease-soft),
+    border-color var(--t-base) var(--ease-soft),
+    background var(--t-base) var(--ease-soft),
+    transform var(--t-fast) var(--ease-out);
+}
+.filter:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+.filter.is-active {
+  color: #06231f;
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+

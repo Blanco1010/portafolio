@@ -1,0 +1,111 @@
+/* ================================ 8. HERO ================================ */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+  padding-top: calc(var(--header-h) + 3rem);
+  padding-bottom: 7rem;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.95rem 0.4rem 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--r-full);
+}
+
+.hero__status {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.hero__status::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-ring 2.4s var(--ease-out) infinite;
+}
+
+.hero__title {
+  font-size: var(--step-4);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.1rem;
+}
+.hero__title-line {
+  display: block;
+}
+.hero__title-line--accent {
+  background: linear-gradient(115deg, var(--accent) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__role {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--step-1);
+  color: var(--text-muted);
+}
+.hero__role-sep {
+  color: var(--accent);
+}
+.hero__role-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.hero__role-rotator {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--text);
+}
+.hero__role-word {
+  display: inline-block;
+}
+.hero__role-word.is-swapping {
+  animation: word-swap 0.42s var(--ease-out);
+}
+.hero__role-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  margin-left: 3px;
+  background: var(--accent);
+  translate: 0 0.12em;
+  animation: caret-blink 1.1s steps(2, start) infinite;
+}
+/* Al pausar, el parpadeo también se detiene: si no, el control no cumpliría
+   su función para quien lo pulsa precisamente por el movimiento. */
+.rotator-paused .hero__role-caret {
+  animation: none;
+}
+

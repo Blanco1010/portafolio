@@ -1,0 +1,19 @@
+{
+  "name": "portafolio-juan-camilo-blanco",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portafolio personal de Juan Camilo Blanco Martinez — HTML, CSS y TypeScript, sin frameworks.",
+  "author": "Juan Camilo Blanco Martinez <blancotech1010@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "node tools/build-css.mjs && tsc",
+    "watch:css": "node tools/build-css.mjs --watch",
+    "watch:ts": "tsc --watch",
+    "serve": "npx --yes serve . --listen 4300",
+    "clean": "node -e \"require('node:fs').rmSync('assets/js',{recursive:true,force:true})\""
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,92 @@
+/* ============================= 18. RESPONSIVE ============================ */
+@media (max-width: 1000px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero__visual {
+    max-width: 560px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .burger {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: fixed;
+    inset: var(--header-h) 0 auto 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    padding: 1.5rem var(--gutter) 2rem;
+    /* En pantallas bajas (o en horizontal) el panel superaba el alto disponible
+       y el botón de descarga quedaba fuera de alcance. */
+    max-height: calc(100dvh - var(--header-h));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: rgba(10, 14, 20, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition:
+      opacity var(--t-base) var(--ease-out),
+      transform var(--t-base) var(--ease-out),
+      visibility var(--t-base) linear;
+  }
+  .nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+  .nav__link {
+    padding: 0.85rem 1rem;
+    font-size: var(--step-0);
+  }
+  .nav__link::after {
+    display: none;
+  }
+  .nav__link.is-active {
+    background: var(--accent-soft);
+  }
+  .nav__cta {
+    align-self: flex-start;
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .timeline__item {
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 1rem;
+  }
+  .timeline__header {
+    flex-direction: column;
+  }
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero__actions .btn,
+  .cta__actions .btn {
+    flex: 1 1 100%;
+  }
+}
+

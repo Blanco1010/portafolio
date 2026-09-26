@@ -1,0 +1,43 @@
+/* ======================= 19. MOVIMIENTO REDUCIDO ========================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .btn:hover,
+  .stat:hover,
+  .skill:hover,
+  .panel:hover,
+  .timeline__card:hover,
+  a.contact__card:hover,
+  .filter:hover {
+    transform: none;
+  }
+
+  .hero__status::after,
+  .timeline__dot--live::after,
+  .scroll-cue__line::after,
+  .hero__role-caret {
+    animation: none;
+  }
+
+  .ambient__glow {
+    display: none;
+  }
+}
+

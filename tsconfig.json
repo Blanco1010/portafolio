@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+
+    // Módulos ES nativos, sin empaquetador: el navegador carga los archivos tal
+    // cual con <script type="module">. Por eso las importaciones del código
+    // fuente llevan extensión ".js" — TypeScript no las reescribe.
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    "outDir": "assets/js",
+    "rootDir": "src",
+
+    "strict": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "removeComments": false,
+    "newLine": "lf",
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"]
+}

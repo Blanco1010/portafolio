@@ -1,0 +1,50 @@
+/* ============================== 21. IMPRESIÓN ============================ */
+@media print {
+  .site-header,
+  .scroll-cue,
+  .scroll-progress,
+  .ambient,
+  .filters,
+  .cta__actions,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  /* Sin esto el nombre, recortado sobre un degradado, se imprimiría en blanco. */
+  .hero__title-line--accent {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    color: #000;
+  }
+
+  .section__title,
+  .timeline__company,
+  .panel__title,
+  .contact__value,
+  .stat__value {
+    color: #000;
+  }
+
+  .about__text p,
+  .timeline__points li,
+  .section__lead {
+    color: #222;
+  }
+
+  .section,
+  .hero {
+    padding-block: 1.5rem;
+    min-height: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

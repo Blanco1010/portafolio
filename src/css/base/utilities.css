@@ -1,0 +1,38 @@
+/* ============================= 3. UTILIDADES ============================== */
+.shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  color: #06231f;
+  background: var(--accent);
+  border-radius: 0 0 var(--r-md) var(--r-md);
+  transform: translateY(-110%);
+  transition: transform var(--t-base) var(--ease-out);
+}
+/* `:focus` a propósito, no `:focus-visible`: un enlace de salto debe hacerse
+   visible en cuanto recibe el foco, sea cual sea la heurística del navegador. */
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Visible solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+

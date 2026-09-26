@@ -1,0 +1,22 @@
+.languages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.language {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+.language:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.language__name {
+  font-size: var(--step-1);
+  font-weight: 600;
+}
+

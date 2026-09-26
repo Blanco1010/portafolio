@@ -1,0 +1,69 @@
+/* Control de pausa del rotador (WCAG 2.2.2) */
+.role-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  transition:
+    color var(--t-base) var(--ease-soft),
+    border-color var(--t-base) var(--ease-soft),
+    background var(--t-base) var(--ease-soft);
+}
+.role-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+.role-toggle__icon {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+/* Pausado: se muestra el icono de reproducir. */
+.role-toggle[aria-pressed='true'] .role-toggle__pause,
+.role-toggle .role-toggle__play {
+  display: none;
+}
+.role-toggle[aria-pressed='true'] .role-toggle__play {
+  display: block;
+}
+
+.hero__lead {
+  max-width: 54ch;
+  margin-bottom: 2.25rem;
+  color: var(--text-muted);
+  font-size: var(--step-1);
+  line-height: 1.75;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.hero__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+.hero__fact dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+  margin-bottom: 0.3rem;
+}
+.hero__fact dd {
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--text);
+}
+

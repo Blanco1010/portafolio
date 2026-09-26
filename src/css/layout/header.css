@@ -1,0 +1,141 @@
+/* ============================== 6. CABECERA =============================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  transition:
+    background var(--t-base) var(--ease-soft),
+    border-color var(--t-base) var(--ease-soft),
+    backdrop-filter var(--t-base) var(--ease-soft);
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.is-stuck {
+  background: rgba(10, 14, 20, 0.82);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom-color: var(--border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: var(--header-h);
+}
+
+.brand {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  transition: color var(--t-base) var(--ease-soft);
+}
+.brand:hover {
+  color: var(--accent);
+}
+.brand__bracket {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.85rem;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--r-sm);
+  transition:
+    color var(--t-base) var(--ease-soft),
+    background var(--t-base) var(--ease-soft);
+}
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.25rem;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform var(--t-base) var(--ease-out);
+}
+.nav__link:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+.nav__link.is-active {
+  color: var(--accent);
+}
+.nav__link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav__cta {
+  white-space: nowrap;
+}
+
+/* Botón hamburguesa */
+.burger {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-sm);
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  transition:
+    border-color var(--t-base) var(--ease-soft),
+    color var(--t-base) var(--ease-soft);
+}
+.burger:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.burger__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 18px;
+  height: 14px;
+}
+.burger__box span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform var(--t-base) var(--ease-out), opacity var(--t-fast) linear;
+}
+.burger[aria-expanded='true'] .burger__box span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.burger[aria-expanded='true'] .burger__box span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.burger[aria-expanded='true'] .burger__box span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+

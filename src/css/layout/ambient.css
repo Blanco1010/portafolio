@@ -1,0 +1,38 @@
+/* =========================== 4. FONDO AMBIENTAL =========================== */
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ambient__glow {
+  position: absolute;
+  /* `inset: 0` a propósito: main.ts escribe --mx/--my con clientX/clientY, que son
+     relativos al viewport. Cualquier inset negativo desplazaría el halo respecto
+     al cursor en esa misma proporción. */
+  inset: 0;
+  background:
+    radial-gradient(
+      420px circle at var(--mx) var(--my),
+      rgba(94, 234, 212, 0.14),
+      transparent 62%
+    ),
+    radial-gradient(760px circle at 82% 8%, rgba(129, 140, 248, 0.1), transparent 60%),
+    radial-gradient(620px circle at 12% 92%, rgba(94, 234, 212, 0.06), transparent 62%);
+  transition: background-position var(--t-slow) var(--ease-soft);
+}
+
+.ambient__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.35;
+  mask-image: radial-gradient(circle at 50% 0%, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle at 50% 0%, #000 0%, transparent 72%);
+}
+

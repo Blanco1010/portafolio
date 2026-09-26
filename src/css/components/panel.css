@@ -1,0 +1,40 @@
+.panel {
+  padding: clamp(1.6rem, 3vw, 2.25rem);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition:
+    transform var(--t-base) var(--ease-out),
+    border-color var(--t-base) var(--ease-soft),
+    box-shadow var(--t-base) var(--ease-soft);
+}
+.panel:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-line);
+  box-shadow: var(--shadow-glow);
+}
+
+.panel__kicker {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+
+.panel__title {
+  font-size: var(--step-1);
+  margin-bottom: 0.4rem;
+}
+
+.panel__subtitle {
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.panel__meta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+

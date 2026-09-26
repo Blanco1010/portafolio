@@ -1,0 +1,75 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+}
+
+.skill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  overflow: hidden;
+  padding: 0.6rem 1.25rem 0.6rem 0.95rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  transition:
+    transform var(--t-base) var(--ease-out),
+    border-color var(--t-base) var(--ease-soft),
+    box-shadow var(--t-base) var(--ease-soft);
+}
+
+/* Los logos van sobre una tarjeta clara: se muestran con sus colores oficiales
+   sin que los oscuros (AWS, Jenkins) se pierdan contra el fondo del sitio. */
+.skill__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 9px;
+  object-fit: contain;
+  transition: transform var(--t-base) var(--ease-out);
+}
+.skill:hover .skill__icon {
+  transform: scale(1.08);
+}
+.skill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, var(--accent-soft), transparent);
+  translate: -100% 0;
+  transition: translate var(--t-slow) var(--ease-soft);
+}
+.skill:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-line);
+  box-shadow: var(--shadow-glow);
+}
+.skill:hover::before {
+  translate: 100% 0;
+}
+.skill__name {
+  position: relative;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--text);
+}
+
+.skill.is-hidden {
+  display: none;
+}
+.skill.is-entering {
+  animation: chip-in 0.42s var(--ease-out) backwards;
+}
+
+.skills__status {
+  margin-top: 1.5rem;
+  font-size: var(--step--1);
+  color: var(--text-dim);
+}
+
