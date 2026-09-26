@@ -4,6 +4,7 @@ node_modules/
 # Sistema
 Thumbs.db
 .DS_Store
+.claude
 
 # Nota: assets/js/main.js SI se versiona a proposito.
 # Es el compilado de src/main.ts y permite que el sitio funcione
