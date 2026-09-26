@@ -1,5 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-# Al publicar, descomenta y pon tu dominio real:
-# Sitemap: https://TU-DOMINIO.com/sitemap.xml
+Sitemap: https://blanco1010.github.io/portafolio/sitemap.xml
