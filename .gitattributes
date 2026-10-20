@@ -1,0 +1,19 @@
+# =============================================================================
+# Estadísticas de lenguaje (GitHub Linguist)
+# -----------------------------------------------------------------------------
+# Sin esto, GitHub cuenta DOS VECES el mismo CSS: una en src/css/ (el fuente,
+# 31 archivos) y otra en assets/css/styles.css (el ensamblado que genera
+# tools/build-css.mjs). Lo mismo con TypeScript, que se cuenta como fuente y
+# otra vez como JavaScript compilado en assets/js/.
+#
+# Marcando la salida como generada, las estadísticas reflejan lo que realmente
+# se escribe a mano, y GitHub además colapsa estos archivos en los diffs de los
+# pull requests, que es lo que quieres: nadie necesita revisar un build.
+# =============================================================================
+
+assets/css/styles.css   linguist-generated=true
+assets/js/**            linguist-generated=true
+
+# Los logos de tecnologías vienen de Devicon y del sitio oficial de Serverpod:
+# son de terceros, no código propio.
+assets/icons/**         linguist-vendored=true
