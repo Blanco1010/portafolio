@@ -778,7 +778,20 @@ button {
 .section {
   position: relative;
   padding-block: var(--section-y);
-  scroll-margin-top: var(--header-h);
+
+  /* Al navegar por un ancla el navegador alinea el BORDE de la sección, no su
+     contenido, así que el padding superior (var(--section-y), hasta 136px)
+     quedaba como una banda vacía bajo la cabecera.
+     Se descuenta ese padding para que lo que aterrice arriba sea el título.
+
+     El cálculo: posición final del título
+       = scroll-padding-top del html + este scroll-margin-top + padding-top
+       = (--header-h + 1rem) + (0.75rem − --section-y) + --section-y
+       = --header-h + 1.75rem
+     Es decir, el título queda siempre ~28px bajo la cabecera, sea cual sea el
+     viewport, porque --section-y se cancela. El valor resultante es negativo
+     a propósito. */
+  scroll-margin-top: calc(0.75rem - var(--section-y));
 }
 
 .section--alt {
