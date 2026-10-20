@@ -1,0 +1,6 @@
+/* ========================= SECCIÓN PROYECTOS ============================= */
+/* El layout de las tarjetas vive en components/project.css; aquí solo lo
+   propio de la sección. */
+#proyectos .section__head {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}

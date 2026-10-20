@@ -44,6 +44,8 @@ const ARCHIVOS = [
   'components/stat.css',
   'components/timeline.css',
   'components/chip.css',
+  'sections/projects.css',
+  'components/project.css',
   'sections/skills.css',
   'components/filter.css',
   'components/skill.css',

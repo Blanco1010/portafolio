@@ -129,6 +129,7 @@
           <ul class="nav__list" role="list">
             <li><a class="nav__link" href="#sobre-mi" data-nav-link>Sobre mí</a></li>
             <li><a class="nav__link" href="#experiencia" data-nav-link>Experiencia</a></li>
+            <li><a class="nav__link" href="#proyectos" data-nav-link>Proyectos</a></li>
             <li><a class="nav__link" href="#habilidades" data-nav-link>Habilidades</a></li>
             <li><a class="nav__link" href="#educacion" data-nav-link>Educación</a></li>
             <li><a class="nav__link" href="#contacto" data-nav-link>Contacto</a></li>
@@ -429,11 +430,137 @@
         </div>
       </section>
 
-      <!-- ========================= HABILIDADES ========================= -->
-      <section class="section" id="habilidades" aria-labelledby="habilidades-titulo">
+      <!-- ========================== PROYECTOS ========================== -->
+      <section class="section" id="proyectos" aria-labelledby="proyectos-titulo">
         <div class="shell">
           <header class="section__head" data-reveal>
             <p class="section__index" aria-hidden="true">03</p>
+            <h2 class="section__title" id="proyectos-titulo">Proyectos</h2>
+            <p class="section__lead">
+              Sitios corporativos construidos con Astro y desplegados en Firebase Hosting.
+            </p>
+          </header>
+
+          <ul class="projects" role="list">
+            <li class="project" data-reveal>
+              <a
+                class="project__link"
+                href="https://clinica-dental-aurora.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="project__shot"
+                  src="assets/projects/clinica-dental-aurora.webp"
+                  alt="Sitio web de Clínica Dental Aurora en portátil y móvil"
+                  loading="lazy"
+                  decoding="async"
+                  width="1669"
+                  height="939"
+                />
+                <div class="project__body">
+                  <h3 class="project__name">
+                    Clínica Dental Aurora
+                    <svg class="project__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M7 17 17 7M9 7h8v8" />
+                    </svg>
+                  </h3>
+                  <p class="project__desc">
+                    Sitio para una clínica odontológica: servicios, casos clínicos y agendamiento
+                    de citas, con foco en transmitir confianza al paciente.
+                  </p>
+                  <ul class="chips chips--sm" role="list">
+                    <li class="chip">Astro</li>
+                    <li class="chip">TypeScript</li>
+                    <li class="chip">CSS</li>
+                    <li class="chip">Firebase Hosting</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-reveal data-reveal-delay="1">
+              <a
+                class="project__link"
+                href="https://rutacargo.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="project__shot"
+                  src="assets/projects/rutacargo.webp"
+                  alt="Sitio web de RutaCargo en portátil y móvil"
+                  loading="lazy"
+                  decoding="async"
+                  width="1669"
+                  height="939"
+                />
+                <div class="project__body">
+                  <h3 class="project__name">
+                    RutaCargo
+                    <svg class="project__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M7 17 17 7M9 7h8v8" />
+                    </svg>
+                  </h3>
+                  <p class="project__desc">
+                    Sitio para una empresa de transporte y logística: cotización de envíos,
+                    rastreo de guías y cobertura nacional.
+                  </p>
+                  <ul class="chips chips--sm" role="list">
+                    <li class="chip">Astro</li>
+                    <li class="chip">TypeScript</li>
+                    <li class="chip">CSS</li>
+                    <li class="chip">Firebase Hosting</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-reveal data-reveal-delay="2">
+              <a
+                class="project__link"
+                href="https://constructora-vertice.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="project__shot"
+                  src="assets/projects/constructora-vertice.webp"
+                  alt="Sitio web de Constructora Vértice en portátil y móvil"
+                  loading="lazy"
+                  decoding="async"
+                  width="1669"
+                  height="939"
+                />
+                <div class="project__body">
+                  <h3 class="project__name">
+                    Constructora Vértice
+                    <svg class="project__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M7 17 17 7M9 7h8v8" />
+                    </svg>
+                  </h3>
+                  <p class="project__desc">
+                    Sitio para una constructora: obra nueva, remodelación y acabados, con
+                    portafolio de proyectos y solicitud de cotización.
+                  </p>
+                  <ul class="chips chips--sm" role="list">
+                    <li class="chip">Astro</li>
+                    <li class="chip">TypeScript</li>
+                    <li class="chip">CSS</li>
+                    <li class="chip">Firebase Hosting</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========================= HABILIDADES ========================= -->
+      <section class="section section--alt" id="habilidades" aria-labelledby="habilidades-titulo">
+        <div class="shell">
+          <header class="section__head" data-reveal>
+            <p class="section__index" aria-hidden="true">04</p>
             <h2 class="section__title" id="habilidades-titulo">Stack tecnológico</h2>
             <p class="section__lead">Tecnologías con las que he trabajado en proyectos profesionales.</p>
           </header>
@@ -578,10 +705,10 @@
       </section>
 
       <!-- ========================== EDUCACIÓN ========================== -->
-      <section class="section section--alt" id="educacion" aria-labelledby="educacion-titulo">
+      <section class="section" id="educacion" aria-labelledby="educacion-titulo">
         <div class="shell">
           <header class="section__head" data-reveal>
-            <p class="section__index" aria-hidden="true">04</p>
+            <p class="section__index" aria-hidden="true">05</p>
             <h2 class="section__title" id="educacion-titulo">Formación e idiomas</h2>
             <p class="section__lead">Base académica y lenguas de trabajo.</p>
           </header>
@@ -608,10 +735,10 @@
       </section>
 
       <!-- =========================== CONTACTO =========================== -->
-      <section class="section" id="contacto" aria-labelledby="contacto-titulo">
+      <section class="section section--alt" id="contacto" aria-labelledby="contacto-titulo">
         <div class="shell">
           <header class="section__head" data-reveal>
-            <p class="section__index" aria-hidden="true">05</p>
+            <p class="section__index" aria-hidden="true">06</p>
             <h2 class="section__title" id="contacto-titulo">Hablemos</h2>
             <p class="section__lead">
               ¿Tienes un proyecto en mente o una vacante que encaje? Estos son mis datos de contacto.
