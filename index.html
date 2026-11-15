@@ -281,7 +281,7 @@
                 <span class="stat__label">Empresas y clientes</span>
               </li>
               <li class="stat">
-                <span class="stat__value"><span data-counter="30">0</span></span>
+                <span class="stat__value"><span data-counter="31">0</span></span>
                 <span class="stat__label">Tecnologías</span>
               </li>
             </ul>
@@ -437,12 +437,52 @@
             <p class="section__index" aria-hidden="true">03</p>
             <h2 class="section__title" id="proyectos-titulo">Proyectos</h2>
             <p class="section__lead">
-              Sitios corporativos construidos con Astro y desplegados en Firebase Hosting.
+              Una aplicación de escritorio en Rust y tres sitios corporativos en producción.
             </p>
           </header>
 
           <ul class="projects" role="list">
             <li class="project" data-reveal>
+              <a
+                class="project__link"
+                href="https://github.com/Blanco1010/diskscope"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="project__shot"
+                  src="assets/projects/diskscope.webp"
+                  alt="Interfaz de DiskScope mostrando el mapa de uso del disco"
+                  loading="lazy"
+                  decoding="async"
+                  width="1100"
+                  height="619"
+                />
+                <div class="project__body">
+                  <p class="project__kicker">Aplicación de escritorio · Código abierto</p>
+                  <h3 class="project__name">
+                    DiskScope
+                    <svg class="project__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M7 17 17 7M9 7h8v8" />
+                    </svg>
+                  </h3>
+                  <p class="project__desc">
+                    Analizador de almacenamiento para Windows: recorre el disco en paralelo,
+                    dibuja un treemap de dónde se fue el espacio, detecta duplicados por huella
+                    BLAKE3 y borra a la papelera, nunca de forma definitiva.
+                  </p>
+                  <ul class="chips chips--sm" role="list">
+                    <li class="chip">Rust</li>
+                    <li class="chip">Tauri 2</li>
+                    <li class="chip">TypeScript</li>
+                    <li class="chip">SQLite</li>
+                    <li class="chip">Vite</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-reveal data-reveal-delay="1">
               <a
                 class="project__link"
                 href="https://clinica-dental-aurora.web.app/"
@@ -478,7 +518,7 @@
               </a>
             </li>
 
-            <li class="project" data-reveal data-reveal-delay="1">
+            <li class="project" data-reveal data-reveal-delay="2">
               <a
                 class="project__link"
                 href="https://rutacargo.web.app/"
@@ -514,7 +554,7 @@
               </a>
             </li>
 
-            <li class="project" data-reveal data-reveal-delay="2">
+            <li class="project" data-reveal data-reveal-delay="3">
               <a
                 class="project__link"
                 href="https://constructora-vertice.web.app/"
@@ -602,6 +642,10 @@
             <li class="skill" data-category="lenguajes backend">
               <img class="skill__icon" src="assets/icons/csharp.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
               <span class="skill__name">C#</span>
+            </li>
+            <li class="skill" data-category="lenguajes backend">
+              <img class="skill__icon" src="assets/icons/rust.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />
+              <span class="skill__name">Rust</span>
             </li>
             <li class="skill" data-category="frontend">
               <img class="skill__icon" src="assets/icons/angular.svg" alt="" loading="lazy" decoding="async" width="24" height="24" />

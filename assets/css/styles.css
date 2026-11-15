@@ -1130,6 +1130,17 @@ button {
   min-width: 0;
 }
 
+/* Distingue de un vistazo la app de escritorio de los sitios web, que es
+   información que el visitante necesita antes de pulsar: uno abre una web,
+   el otro lleva a un repositorio. */
+.project__kicker {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
 .project__name {
   display: flex;
   align-items: center;
